@@ -81,18 +81,18 @@ def pull_it_all_together():
     j = 0
 
     #Write the results to csv file
-    new_employee_file = open('Employee_Converted_Data.csv','a')
+    with open('Employee_Converted_Data.csv','w') as new_employee_file:
 
-    #Write headers
-    new_employee_file.write(f'Emp ID,First Name,Last Name,DOB,SSN,State \n')
+        new_employees = csv.writer(new_employee_file, delimiter=',')
 
-    while i < len(list_emp_ID):
+        #Write headers
+        new_employees.writerow(['Emp ID','First Name','Last Name','DOB','SSN','State'])
 
-        new_employee_file.write(f'{list_emp_ID[i]},{list_first_name[i]},{list_last_name[i]},{list_DOB[i]},{list_SSN[i]},{list_state[i]} \n')
+        while i < len(list_emp_ID):
 
-        i += 1
+            new_employees.writerow([list_emp_ID[i],list_first_name[i],list_last_name[i],list_DOB[i],list_SSN[i],list_state[i]])
 
-    new_employee_file.close()
+            i += 1
 
     return
 
