@@ -28,6 +28,7 @@ with open(file_path,newline="",encoding="utf8") as budget_data:
 
     #Sum the profit_loss values and create separate lists for each row
     for row in budget:
+
         total_profit_loss += int(row[1])
         total_months += 1
 
