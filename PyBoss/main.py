@@ -88,6 +88,7 @@ def pull_it_all_together():
         #Write headers
         new_employees.writerow(['Emp ID','First Name','Last Name','DOB','SSN','State'])
 
+        #Loop through each list and write to the csv new_employee_file
         while i < len(list_emp_ID):
 
             new_employees.writerow([list_emp_ID[i],list_first_name[i],list_last_name[i],list_DOB[i],list_SSN[i],list_state[i]])
