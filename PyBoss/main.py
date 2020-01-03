@@ -118,4 +118,5 @@ with open(file_path,newline="",encoding="utf8") as employee_data:
 
         list_state.append(us_state_abbrev[row[4]])
 
+#Call the function to combine the lists into one csv file
 pull_it_all_together()

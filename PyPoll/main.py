@@ -18,6 +18,7 @@ def calculate_votes(candidate_name,total_votes):
 
     #Initiate variables
     i=0
+    global total_candidate_votes
     total_candidate_votes = 0
     percent_of_votes = 0
 
@@ -26,6 +27,7 @@ def calculate_votes(candidate_name,total_votes):
 
         if votes[i] == candidate_name:
             total_candidate_votes += 1
+
 
         i += 1
 
@@ -90,4 +92,5 @@ Election_File.write(f'Winner: {winner} \n')
 Election_File.write('------------------------ \n')
 Election_File.write('--- \n')
 
+#Close the text file
 Election_File.close()
